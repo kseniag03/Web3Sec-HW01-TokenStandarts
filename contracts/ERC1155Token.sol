@@ -6,7 +6,7 @@ import "@openzeppelin/contracts/token/ERC1155/ERC1155.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
 contract ERC1155Token is ERC1155, Ownable {
-    constructor(address initialOwner) ERC1155("WANTED") Ownable(initialOwner) {}
+    constructor(address initialOwner) ERC1155("https://github.com/kseniag03/Web3Sec-HW01-TokenStandarts/blob/master/metadata/ERC1155Token.json") Ownable(initialOwner) {}
 
     function setURI(string memory newuri) public onlyOwner {
         _setURI(newuri);

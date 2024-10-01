@@ -15,7 +15,7 @@ contract ERC721Token is ERC721, ERC721URIStorage, Ownable {
     {}
 
     function _baseURI() internal pure override returns (string memory) {
-        return "WANTED";
+        return "https://github.com/kseniag03/Web3Sec-HW01-TokenStandarts/blob/master/metadata/ERC721Token.json";
     }
 
     function safeMint(address to, string memory uri) public onlyOwner {
