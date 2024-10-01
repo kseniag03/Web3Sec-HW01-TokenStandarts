@@ -1,0 +1,15 @@
+{
+    "name": "ERC1155Token",
+    "description": "An ERC1155-based token.",
+    "image": "WANTED",
+    "attributes": [
+        {
+            "trait_type": "Background",
+            "value": "Red"
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Rare"
+        }
+    ]
+}

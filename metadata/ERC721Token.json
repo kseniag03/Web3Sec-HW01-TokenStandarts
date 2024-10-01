@@ -1,0 +1,15 @@
+{
+    "name": "ERC721Token",
+    "description": "An ERC721-based token.",
+    "image": "WANTED",
+    "attributes": [
+        {
+            "trait_type": "Background",
+            "value": "Blue"
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Common"
+        }
+    ]
+}
