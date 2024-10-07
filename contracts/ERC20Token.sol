@@ -76,6 +76,7 @@ contract ERC20Token is ERC20, Ownable, ERC20Permit {
             balanceOf(msg.sender) >= amount,
             "Insufficient funds on balance"
         );
+        require(fee >= 0, "Fee calculation error");
 
         super.transfer(feeCollector, fee);
         super.transfer(recipient, amountFee);
