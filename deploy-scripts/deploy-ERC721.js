@@ -14,13 +14,10 @@ async function main() {
 
     const contract = await ERC721Token.attach(erc721.address);
 
-    mintRes = await contract.safeMint(deployer.address, "https://github.com/kseniag03/Web3Sec-HW01-TokenStandarts/blob/master/metadata/ERC721Token.json");
-    await contract.setTokenPrice(1, ethers.utils.parseEther("0.001"));
-
-    console.log(mintRes);
-
-    await contract.approve(addr1.address, 1);
-    await contract.connect(addr1).safeTransferFrom(deployer.address, addr1.address, 1);
+    await contract.safeMint(deployer.address, "https://github.com/kseniag03/Web3Sec-HW01-TokenStandarts/blob/master/metadata/ERC721Token.json");
+    await contract.setTokenPrice(0, ethers.utils.parseEther("0.001"));
+    await contract.approve(addr1.address, 0);
+    await contract.connect(addr1).safeTransferFrom(deployer.address, addr1.address, 0);
 
 }
 
