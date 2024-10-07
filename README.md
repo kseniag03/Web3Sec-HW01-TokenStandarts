@@ -35,7 +35,7 @@ npx hardhat run deploy-scripts/deploy-ERC721.js --network amoy/sepolia
 
 ## Contract Links
 1. ERC721 Sepolia: https://sepolia.etherscan.io/address/0x842ac4Af042ffa0Baa62A350E70d5e10cC3C25BB
-2. ERC721 Amoy: WANTED
+2. ERC721 Amoy: https://www.oklink.com/ru/amoy/address/0x012b49DA86842972080248455BbF62f5008c5964
 
 ## Questions
 1. ```approve``` позволяет владельцу токена разрешить 3-й стороне (адресу или контракту) управлять определенным кол-вом токенов (использовать transferFrom для перевода от владельца к другому адресу)
