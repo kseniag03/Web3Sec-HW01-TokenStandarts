@@ -18,11 +18,11 @@ npx hardhat node
 npx hardhat test
 ```
 
-## Deploy
+## Deploy with local hardhat test network
 ```bash
-npx hardhat run deploy-scripts/deploy-ERC20.js --network sepolia
-npx hardhat run deploy-scripts/deploy-ERC721.js --network sepolia
-npx hardhat run deploy-scripts/deploy-ERC1155.js --network sepolia
+npx hardhat run deploy-scripts/deploy-ERC20.js --network hardhat
+npx hardhat run deploy-scripts/deploy-ERC721.js --network hardhat
+npx hardhat run deploy-scripts/deploy-ERC1155.js --network hardhat
 ```
 
 ## Contract Links

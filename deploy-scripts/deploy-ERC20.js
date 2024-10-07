@@ -1,3 +1,4 @@
+require('dotenv').config();
 const { ethers } = require("hardhat");
 
 async function main() {
@@ -6,7 +7,7 @@ async function main() {
     console.log("Deploying ERC20Token with account:", deployer.address);
 
     const ERC20Token = await ethers.getContractFactory("ERC20Token");
-    const erc20 = await ERC20Token.deploy(deployer.address);
+    const erc20 = await ERC20Token.deploy(deployer.address, `${process.env.METAMASK_PUBLIC_ADDRESS}`, 1);
     await erc20.deployed();
 
     console.log("ERC20 deployed to:", erc20.address);
