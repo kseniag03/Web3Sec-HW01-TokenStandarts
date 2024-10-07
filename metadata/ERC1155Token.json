@@ -1,7 +1,7 @@
 {
     "name": "ERC1155Token",
     "description": "An ERC1155-based token.",
-    "image": "WANTED",
+    "image": "https://unsplash.com/photos/a-green-and-black-background-with-numbers-and-the-number-five-ker4cT8dhLA",
     "attributes": [
         {
             "trait_type": "Background",

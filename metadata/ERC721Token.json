@@ -1,7 +1,7 @@
 {
     "name": "ERC721Token",
     "description": "An ERC721-based token.",
-    "image": "WANTED",
+    "image": "https://unsplash.com/photos/a-close-up-of-a-small-red-block-on-top-of-a-pile-of-money-yscrM1AOEKI",
     "attributes": [
         {
             "trait_type": "Background",

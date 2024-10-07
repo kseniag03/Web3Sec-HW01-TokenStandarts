@@ -25,6 +25,13 @@ npx hardhat run deploy-scripts/deploy-ERC721.js --network hardhat
 npx hardhat run deploy-scripts/deploy-ERC1155.js --network hardhat
 ```
 
+## Deploy ERC721
+```bash
+npx hardhat run deploy-scripts/deploy-ERC721.js --network amoy/sepolia
+```
+Далее в строке вывода: "ERC721 deployed to:" получить адрес и ввести его при импорте токена в Metamask:
+![скрин из кошелька](https://github.com/kseniag03/Web3Sec-HW01-TokenStandarts/blob/master/metadata/721-nft-metamask.jpg)
+
 ## Contract Links
 WANTED
 
