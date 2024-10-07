@@ -112,4 +112,39 @@ describe("ERC20Token", function () {
             ).to.be.revertedWith("Allowance exceeded");
         });
     });
+
+    describe("Permit", function () {
+        it("Should allow gasless transfers with Permit", async function () {
+            const domain = {
+                name: "ERC20Token",
+                version: "1",
+                chainId: 1337,
+                verifyingContract: token.address,
+            };
+            const types = {
+                Permit: [
+                    { name: "owner", type: "address" },
+                    { name: "spender", type: "address" },
+                    { name: "value", type: "uint256" },
+                    { name: "nonce", type: "uint256" },
+                    { name: "deadline", type: "uint256" },
+                ],
+            };
+            const deadline = Math.floor(Date.now() / 1000) + 60 * 60;
+            const nonce = await token.nonces(owner.address);
+            const value = ethers.utils.parseEther("10");
+            const signature = await owner._signTypedData(domain, types, {
+                owner: owner.address,
+                spender: addr1.address,
+                value: value,
+                nonce: nonce,
+                deadline: deadline,
+            });
+            const { v, r, s } = ethers.utils.splitSignature(signature);
+
+            await token.permit(owner.address, addr1.address, value, deadline, v, r, s);
+
+            expect(await token.allowance(owner.address, addr1.address)).to.equal(value);
+        });
+    });
 });

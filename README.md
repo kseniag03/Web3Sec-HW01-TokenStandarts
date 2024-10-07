@@ -12,6 +12,12 @@
 npm install
 ```
 
+## Testing
+```bash
+npx hardhat node
+npx hardhat test
+```
+
 ## Deploy
 ```bash
 npx hardhat run deploy-scripts/deploy-ERC20.js --network sepolia
